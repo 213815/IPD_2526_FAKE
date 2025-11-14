@@ -6,57 +6,24 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'Better TFT' # Only 10 chars displayed.
-strategy_name = 'Better Tit for Tat'
-strategy_description = 'It is Tit for Tat so it picks the move the opponent did last. It also gives out 2 c after a bad pattern repeats. It also changes c,b,c,b loops to b,b,b,b loops'
 
-# NEEDS TO BE RERUN BEFORE EVERY MATCH (global variables need to be reset)
-# NEEDS TO BE RERUN BEFORE EVERY MATCH (global variables need to be reset)
-# NEEDS TO BE RERUN BEFORE EVERY MATCH (global variables need to be reset)
+#YOUR TEAM DETAILS HERE
+team_name = '' # Only 10 chars displayed.
+strategy_name = ''
+strategy_description = ''
 
-OnceandDone = 0
-times = 1
-betray = 0
 import random
+
+
+
+#YOUR CODE IN THE MOVE FUNCTION HERE
 def move(my_history, their_history, my_score, their_score):
-    # NEEDS TO BE RERUN BEFORE EVERY MATCH (global variables need to be reset)
-    global OnceandDone
-    global times
-    global betray
-    
-    if len(my_history) == 0:
-        return('c')
+	
 
-    if OnceandDone == 1:
-        OnceandDone += 1
-        return('c')
 
-    if len(my_history) >= 5 and times <= 3:
-        if their_history[-4:-1] == my_history[-5:-2] and their_history[-4:-1] != ['c','c','c','c']:
-            OnceandDone = 1
-            times += 1
-            return('c')
 
-    if betray >= 1:
-        if betray == 1:
-            betray += 1
-            return('b')
-        if their_history[-1] == 'c':
-            betray = 0
-            OnceandDone = 1
-            return('c')
-        else:
-            return('b')
-            
-    if len(my_history) >= 5 and times > 3:
-        if their_history[-4:-1] == my_history[-5:-2] and their_history[-4:-1] == ['b','c','b','c']:
-            betray = 1
-            return('b')
 
-    if their_history[-1] == 'b':
-        return('b')
-    if their_history[-1] == 'c':
-        return('c')
+
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
@@ -95,4 +62,4 @@ if __name__ == '__main__':
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
               their_score=0,
-              result='b')     
+              result='b')             

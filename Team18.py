@@ -7,25 +7,22 @@
 ####
 
 
-team_name = 'GameTheory' # Only 10 chars displayed.
-strategy_name = 'Randomness unless you backstab'
-strategy_description = 'If the opponent colludes than the algorithm randomly selects c or b for the next round. If the opponent backstabs, than the algorithm will always backstab back. '
+#YOUR TEAM DETAILS HERE
+team_name = '' # Only 10 chars displayed.
+strategy_name = ''
+strategy_description = ''
 
 import random
 
+
+
+#YOUR CODE IN THE MOVE FUNCTION HERE
 def move(my_history, their_history, my_score, their_score):
-  if len(my_history)==0:
-    return('b')
-  elif len(their_history) >3 and their_history == ['b','c','b']:
-    return('c')
-  elif 'b' in their_history[-1:]:
-    return('b')
-  elif their_history[-2:] == 'c':
-    return ('b')
-  elif their_history[-2:] == 'b':
-    return 'b'
-  else:
-    return('c')
+	
+
+
+
+
 
 
     

@@ -6,28 +6,25 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'Digital Destroyers' # Only 10 chars displayed.
-strategy_name = 'Nice-but-not-nice'
-strategy_description = 'The first output is always to collude. As it analyses its history, it tries to be nice after betraying five times at most. But the strategy of the program is to be nice but not gullible, so it also betrays back after the opponent betrays twice continuously. Just so that the program doesnt get into a loop, there is also a random choice in which it will pick betray 3 out of 5 times.'
+
+#YOUR TEAM DETAILS HERE
+team_name = '' # Only 10 chars displayed.
+strategy_name = ''
+strategy_description = ''
+
 import random
+
+
+
+#YOUR CODE IN THE MOVE FUNCTION HERE
 def move(my_history, their_history, my_score, their_score):
-    list1=['b', 'c', 'b', 'c', 'b']
-    
-    if len(my_history)>=5 and my_history[-5:]==['b', 'b', 'b', 'b', 'b']:
-        return 'c'
-    
-    if len(my_history)==0:
-        return 'c'
-    
-    else:
-        if their_history[-1]=='c':
-            return 'b'
-        elif len(their_history) >=2 and their_history[-2:]==['b', 'b']:
-            return 'b'
-        elif len(their_history) >=2 and (their_history[-2:]==['c', 'b']) or (their_history[-2:]==['b', 'c']):
-            return random.choice(list1)
-        else:
-            return 'c'
+	
+
+
+
+
+
+
     
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
@@ -65,4 +62,4 @@ if __name__ == '__main__':
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
               their_score=0,
-              result='b')     
+              result='b')             

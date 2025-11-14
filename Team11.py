@@ -6,23 +6,25 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'TheThinkR' # Only 10 chars displayed.
-strategy_name = 'BrainPower!!!'
-strategy_description = 'It Uses its Brain Power'
+
+#YOUR TEAM DETAILS HERE
+team_name = '' # Only 10 chars displayed.
+strategy_name = ''
+strategy_description = ''
+
 import random
+
+
+
+#YOUR CODE IN THE MOVE FUNCTION HERE
 def move(my_history, their_history, my_score, their_score):
-  if their_history[-2:]==['c','c'] and 'b' in their_history:
-    return('c')
-  elif their_history.count('b')>=6:
-    return('b')
-  elif len(my_history)<=2 and 'b' in their_history:
-    return('b')
-  elif their_history[-2:]==['b','b']:
-    return('b')
-  elif len(their_history)>3 and 'b' not in their_history:
-    return('b')
-  else:
-    return('c')
+	
+
+
+
+
+
+
     
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
@@ -60,4 +62,4 @@ if __name__ == '__main__':
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
               their_score=0,
-              result='b')     
+              result='b')             

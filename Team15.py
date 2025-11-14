@@ -6,22 +6,24 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'GACA_FHA' # Only 10 chars displayed.
-strategy_name = 'GACA'
-strategy_description = "Returns c, if the opponent's history indicates that they have returned b for a while the GACA will also return b."
+
+#YOUR TEAM DETAILS HERE
+team_name = '' # Only 10 chars displayed.
+strategy_name = ''
+strategy_description = ''
+
 import random
+
+
+
+#YOUR CODE IN THE MOVE FUNCTION HERE
 def move(my_history, their_history, my_score, their_score):
-    if(len(my_history) == 0):
-       return('c')
-    else:
-       b_tot = their_history.count('b')
-       c_tot = their_history.count('c')
-       if(b_tot > c_tot):
-         return('b')
-       else:
-         return('c')
-       if(their_history[-5] == 'b''b''b''b''b'):
-         return('c')
+	
+
+
+
+
+
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
@@ -60,4 +62,4 @@ if __name__ == '__main__':
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
               their_score=0,
-              result='b')     
+              result='b')             

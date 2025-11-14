@@ -7,20 +7,22 @@
 ####
 
 
-team_name = 'Flan' # Only 10 chars displayed.
-strategy_name = 'FLANTASTIC'
-strategy_description = 'FLANOMENAL '
+#YOUR TEAM DETAILS HERE
+team_name = '' # Only 10 chars displayed.
+strategy_name = ''
+strategy_description = ''
 
 import random
 
-def move(my_history, their_history, my_score, their_score):
 
-    if len(my_history) == 0:
-        return random.choice(['c','b'])
-    elif their_history[-1] == 'b':
-        return 'b'
-    else:
-        return random.choice(['c','b'])
+
+#YOUR CODE IN THE MOVE FUNCTION HERE
+def move(my_history, their_history, my_score, their_score):
+	
+
+
+
+
 
 
     

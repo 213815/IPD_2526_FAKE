@@ -6,18 +6,24 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'Mvaiio' # Only 10 chars displayed.
-strategy_name = 'Protocol'
-strategy_description = 'Enemy History'
+
+#YOUR TEAM DETAILS HERE
+team_name = '' # Only 10 chars displayed.
+strategy_name = ''
+strategy_description = ''
+
 import random
+
+
+
+#YOUR CODE IN THE MOVE FUNCTION HERE
 def move(my_history, their_history, my_score, their_score):
-   if len(my_history) ==0:
-      return('c')
-   elif len(my_history)>10:
-      if their_history[-10:] ==['c','c','c','c','c','c','c','c','c','c']:
-         return('b')
-      else:
-         return('c')
+	
+
+
+
+
+
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
@@ -56,4 +62,4 @@ if __name__ == '__main__':
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
               their_score=0,
-              result='b')     
+              result='b')             

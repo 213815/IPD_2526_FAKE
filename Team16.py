@@ -6,26 +6,25 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'hallo_Mami' # Only 10 chars displayed.
-strategy_name = 'bye bye mami backstab if opponent cooperating, be random otherwise'
-strategy_description = 'Will take advantage of cooperative programs. Will also use the power of randomness with evens and odds determining cooperation or backstabbing'
+
+#YOUR TEAM DETAILS HERE
+team_name = '' # Only 10 chars displayed.
+strategy_name = ''
+strategy_description = ''
 
 import random
-def move(my_history, their_history, my_score, their_score):
- 
-      number = random.randint(0,623)
 
-      if my_history[-1:] == ('c'):
-            return('c')
-        
-      elif len(their_history) >= 2 and their_history[-2:] == ['c','c']:
-            return('b')
-        
-      elif number % 2 == 0:
-            return('b')
-        
-      else:
-            return('c')
+
+
+#YOUR CODE IN THE MOVE FUNCTION HERE
+def move(my_history, their_history, my_score, their_score):
+	
+
+
+
+
+
+
     
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
@@ -63,4 +62,4 @@ if __name__ == '__main__':
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
               their_score=0,
-              result='b')     
+              result='b')             

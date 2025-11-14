@@ -6,32 +6,23 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
+
+#YOUR TEAM DETAILS HERE
+team_name = '' # Only 10 chars displayed.
+strategy_name = ''
+strategy_description = ''
+
 import random
 
-team_name = 'Judgement' # Only 10 chars displayed.
-strategy_name = 'Ratio-based choice'
-strategy_description = 'If the opponent has mostly cooperated, cooperate back. Otherwise, backstab.'
-    
+
+
+#YOUR CODE IN THE MOVE FUNCTION HERE
 def move(my_history, their_history, my_score, their_score):
-   if len(my_history) < 5:
-      return('c')
-   else:
-      theirC = their_history.count('c')
-      theirB = their_history.count('b')
-      if theirC > 0 and theirB > 0:
-        theirRatio = theirC / theirB
-        if theirRatio >= 1.5:
-          pick = random.choice(('b','c','c','c','c'))
-          return(pick)
-        else:
-          pick = random.choice(('b','b','b','b','c'))
-          return(pick)
-      elif theirC == 0:
-        return('b')
-      elif theirB == 0:
-        return('c')
-      else:
-        return('b')
+	
+
+
+
+
 
 
     

@@ -6,26 +6,24 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'Sadness' # Only 10 chars displayed.
-strategy_name = 'The Winning Strategy'
-strategy_description = 'On the first round, it betrays. If its losing, it betrays, and if its winning it has a 66.67% chance to collude. If the opponent has betrayed in the last 2 rounds or colludes twice in a row, it betrays. Other than that, it colludes.'
+
+#YOUR TEAM DETAILS HERE
+team_name = '' # Only 10 chars displayed.
+strategy_name = ''
+strategy_description = ''
+
 import random
+
+
+
+#YOUR CODE IN THE MOVE FUNCTION HERE
 def move(my_history, their_history, my_score, their_score):
-      if their_score > my_score:
-            return 'b'
-      elif my_score > (their_score + 600):
-            return random.choice(('b','c','c'))
-      else:
-        if len(my_history) == 0:
-          return('c')
-        elif their_history[-1] == 'b':
-          return('b')
-        elif len(their_history) > 2 and their_history[-2] == 'b':
-          return('b')
-        elif len(their_history) > 1 and their_history[-2:] == ['c','c']:
-          return('b')
-        else:
-          return('c')
+	
+
+
+
+
+
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
@@ -64,4 +62,4 @@ if __name__ == '__main__':
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
               their_score=0,
-              result='b')     
+              result='b')             
